@@ -9,11 +9,12 @@ public class CollisionHandler : MonoBehaviour
 
     [SerializeField] ParticleSystem collisionParticle, successParticle;
 
-    int currentScene = SceneManager.GetActiveScene().buildIndex;
+    int currentScene;
     int nextScene;
     bool collisionDisable = false;
     void Start()
     {
+        currentScene = SceneManager.GetActiveScene().buildIndex;
         nextScene = currentScene + 1;
         audioSource = GetComponent<AudioSource>();
     }
